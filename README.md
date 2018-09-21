@@ -10,7 +10,8 @@ For linux, try this [approach](https://unix.stackexchange.com/questions/269180/h
 Run this command to write the file to GC bucket, with modifications to the arguments:
 ```
 mvn install
-mvn exec:java -Dexec.mainClass="com.beam.xyz.App" -Dexec.args="<GCP_PROJECT> <GS_PATH> <CHUNK_SIZE_IN_MB>"
+mvn exec:java -Dexec.mainClass="com.beam.xyz.App" -Dorg.slf4j.simpleLogger.defaultLogLevel=debug \
+-Dexec.args="<GCP_PROJECT> <GS_PATH> <CHUNK_SIZE_IN_MB>"
 ```
 
 - argument 1: GCP project
@@ -20,5 +21,6 @@ mvn exec:java -Dexec.mainClass="com.beam.xyz.App" -Dexec.args="<GCP_PROJECT> <GS
 For example, I was running it as
 
 ```
-mvn exec:java -Dexec.mainClass="com.beam.xyz.App" -Dexec.args="apache-beam-testing gs://batbat-storage/tmp 64"
+mvn exec:java -Dexec.mainClass="com.beam.xyz.App" -Dorg.slf4j.simpleLogger.defaultLogLevel=debug \
+-Dexec.args="apache-beam-testing gs://batbat-storage/tmp 64"
 ```
