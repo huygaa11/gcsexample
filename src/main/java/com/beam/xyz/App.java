@@ -1,26 +1,15 @@
 package com.beam.xyz;
 
-import org.apache.beam.sdk.extensions.gcp.options.GcpOptions;
 import org.apache.beam.sdk.extensions.gcp.options.GcsOptions;
 import org.apache.beam.sdk.extensions.gcp.storage.GcsCreateOptions;
-import org.apache.beam.sdk.extensions.gcp.storage.GcsFileSystemRegistrar;
-import org.apache.beam.sdk.extensions.gcp.storage.GcsResourceId;
-import org.apache.beam.sdk.io.FileSystem;
 import org.apache.beam.sdk.io.FileSystems;
-import org.apache.beam.sdk.io.fs.CreateOptions;
 import org.apache.beam.sdk.io.fs.ResourceId;
-import org.apache.beam.sdk.options.PipelineOptions;
 import org.apache.beam.sdk.options.PipelineOptionsFactory;
-import org.apache.beam.sdk.util.GcsUtil;
-import org.apache.beam.sdk.util.GcsUtil.GcsUtilFactory;
-import org.apache.beam.sdk.util.gcsfs.GcsPath;
-import org.apache.commons.compress.utils.IOUtils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.nio.channels.ReadableByteChannel;
 import java.nio.channels.WritableByteChannel;
 
 /**
