@@ -5,7 +5,8 @@ Create a big file called `file.txt` inside the `gcsexample` folder:
 On mac:
 ```(mkfile -n 8g file.txt)```
 
-For linux, try this [approach](https://unix.stackexchange.com/questions/269180/how-to-create-a-large-file-in-unix)
+For linux, try this [approach](https://www.skorks.com/2010/03/how-to-quickly-generate-a-large-file-on-the-command-line-with-linux/). For example, creating 64mb file:
+```dd if=/dev/zero of=file.txt count=65536 bs=1024```
 
 Run this command to write the file to GC bucket, with modifications to the arguments:
 ```
