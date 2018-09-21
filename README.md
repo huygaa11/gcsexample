@@ -6,7 +6,7 @@ cd gcsexample
 (mkfile -n 8g file.txt)
 ```
 
-Run:
+Run this command to write the file to GC bucket:
 ```
 mvn install
 mvn exec:java -Dexec.mainClass="com.beam.xyz.App" -Dexec.args="<GCP_PROJECT> <GS_PATH> <CHUNK_SIZE_IN_MB>"
